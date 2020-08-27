@@ -57,7 +57,7 @@ public class MathEquation {
         this.rightVal = rightVal;
     }
 
-    void execute() {
+    public void execute() {
         switch (opCode) {
             case 'a':
                 result = leftVal + rightVal;
@@ -80,5 +80,10 @@ public class MathEquation {
         sumOfResults += result;
     }
 
-
+    public void execute(double leftVal, double rightVal) {
+        this.leftVal = leftVal;
+        this.rightVal = rightVal;
+        execute();
+        result = (int) result;
+    }
 }
